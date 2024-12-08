@@ -1,8 +1,17 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors'); // Import cors middleware
 const routes = require('./routes');
 
 const app = express();
+
+// Enable CORS
+app.use(cors({
+    origin: '*', // Allow all origins
+}));
+// Allow all origins (for more control, configure allowed origins)
+
+// Middleware
 app.use(bodyParser.json());
 app.use(express.static('public')); // Serve TwiML files
 
