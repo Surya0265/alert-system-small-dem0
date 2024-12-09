@@ -13,7 +13,7 @@ const client = twilio(accountSid, authToken);
  */
 function makeCall(contact) {
     // Define inline TwiML response
-    const twiml = `<Response><Say>Emergency! Please respond immediately.</Say></Response>`;
+    const twiml = `<Response><Say>Emergency! Sai is in danger Sai is in danger  Sai is in danger  Please respond immediately.</Say></Response>`;
 
     // Use inline TwiML directly in the API call
     return client.calls.create({
