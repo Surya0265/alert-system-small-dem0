@@ -17,6 +17,9 @@ app.use(express.static('public')); // Serve TwiML files
 
 // Routes
 app.use('/', routes);
+app.get('/ping', (req, res) => {
+    res.status(200).send('Server is alive');
+  });
 
 const PORT = process.env.SERVER_PORT || 3000;
 app.listen(PORT, () => {
